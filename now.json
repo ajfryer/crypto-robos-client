@@ -1,0 +1,7 @@
+{
+  "build": {
+    "env": {
+      "REACT_APP_API_URL": "https://still-springs-88043.herokuapp.com"
+    }
+  }
+}

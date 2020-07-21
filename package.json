@@ -1,0 +1,63 @@
+{
+  "name": "crypto-robos-client",
+  "version": "0.1.0",
+  "private": true,
+  "dependencies": {
+    "@fortawesome/fontawesome-svg-core": "^1.2.27",
+    "@fortawesome/free-brands-svg-icons": "^5.12.1",
+    "@fortawesome/free-regular-svg-icons": "^5.12.1",
+    "@fortawesome/free-solid-svg-icons": "^5.12.1",
+    "@fortawesome/react-fontawesome": "^0.1.8",
+    "color": "^3.1.2",
+    "cryptocurrency-icons": "^0.16.1",
+    "portfolio-allocation": "^0.0.7",
+    "portfolio-analytics": "^0.0.4",
+    "portfolio-tools": "desert-defi/portfolio-tools",
+    "prop-types": "^15.7.2",
+    "react": "^16.9.0",
+    "react-dom": "^16.9.0",
+    "react-icons-kit": "^1.3.1",
+    "react-modal": "^3.11.2",
+    "react-router-dom": "^5.1.2",
+    "react-scripts": "3.1.1",
+    "react-use": "^13.27.0",
+    "styled-components": "^4.3.2",
+    "styled-normalize": "^8.0.7",
+    "svg-inline-react": "^3.2.0",
+    "victory": "^34.1.2"
+  },
+  "scripts": {
+    "storybook": "start-storybook -p 9009 -s public",
+    "build-storybook": "build-storybook -s public",
+    "start": "react-scripts start",
+    "build": "react-scripts build",
+    "test": "react-scripts test",
+    "eject": "react-scripts eject",
+    "serve": "serve build",
+    "deploy": "now --prod",
+    "predeploy": "CI=true yarn test && yarn audit-filtered",
+    "audit-filtered": "bash -c 'yarn audit --level high; [[ $? -ge 8 ]] && exit 1 || exit 0'"
+  },
+  "eslintConfig": {
+    "extends": "react-app"
+  },
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
+  },
+  "devDependencies": {
+    "@storybook/addon-actions": "^5.2.0",
+    "@storybook/addon-links": "^5.2.0",
+    "@storybook/addons": "^5.2.0",
+    "@storybook/react": "^5.2.0",
+    "react-svg-loader": "^3.0.3"
+  }
+}
