@@ -114,7 +114,7 @@ const GlobalStyles = createGlobalStyle`
     font-size: calc(14px + (26-14) * ((100vw - 320px) / (2560 - 320)));
   }
   body {
-    background-color: #FBFBFB; /*fallback*/
+    background-color: ${(props) => props.theme.color.secondary}; /*fallback*/
     font-family: ${(props) => props.theme.fontFamily.roboto};
     color: ${(props) => props.theme.color.secondary};
     font-weight: normal;

@@ -1,12 +1,12 @@
+// node modules imports
 import React from 'react';
 import styled from 'styled-components';
-import { useHistory } from 'react-router-dom';
-import { NavLink } from 'react-router-dom';
+import { NavLink, Link } from 'react-router-dom';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faRobot } from '@fortawesome/free-solid-svg-icons';
 
+// hero for the splash page
 const SplashHero = () => {
-  const history = useHistory();
   return (
     <Hero>
       <Content>
@@ -22,14 +22,14 @@ const SplashHero = () => {
         </h1>
 
         <p>
-          Simulate popular investment strategies on cryptocurrencies{' '}
+          Simulate popular investment strategies on Crypto coins{' '}
           <span>and benchmark your HODL.</span>
         </p>
         <CTAGroup>
-          <PrimaryCTA onClick={() => history.push('/settings')}>
-            Simulate
-          </PrimaryCTA>
-          <SecondaryCTA>Github</SecondaryCTA>
+          <PrimaryCTA to={'/settings'}>Simulate</PrimaryCTA>
+          <SecondaryCTA href={'https://github.com/ajfryer/crypto-robos-client'}>
+            Github
+          </SecondaryCTA>
         </CTAGroup>
       </Content>
     </Hero>
@@ -55,6 +55,7 @@ const Content = styled.div`
   text-align: center;
   background-color: transparent;
   height: calc(100vh);
+  padding: 1rem;
   /*box-shadow: rgba(190, 46, 221, 0.66) -100px -100px 100px -100px;*/
   @media only screen and (min-width: ${({ theme }) =>
       theme.breakpoint.desktop}) {
@@ -87,6 +88,7 @@ const Content = styled.div`
     span {
       display: table;
       margin: 0 auto;
+      font-weight: 500;
     }
   }
 
@@ -138,7 +140,7 @@ const CTAGroup = styled.div`
   }
 `;
 
-const PrimaryCTA = styled.button`
+const PrimaryCTA = styled(Link)`
   background-color: ${(props) => props.theme.color.accent};
   border: 1px solid ${(props) => props.theme.color.accent};
   box-shadow: rgba(34, 166, 179, 0.33) 1px 4px 150px,
@@ -164,7 +166,7 @@ const PrimaryCTA = styled.button`
   }
 `;
 
-const SecondaryCTA = styled.button`
+const SecondaryCTA = styled.a`
   background-color: transparent;
   border: 1px solid #95afc0;
   padding: 1.25rem 0;

@@ -47,7 +47,6 @@ const SettingsHero = styled.section`
   background-color: ${(props) => props.theme.color.secondary};
   display: flex;
   align-items: center;
-  justify-content: ;
 
   h1 {
     text-align: center;

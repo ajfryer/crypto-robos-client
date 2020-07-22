@@ -1,3 +1,4 @@
+// node modules imports
 import React, { useContext } from 'react';
 import styled from 'styled-components';
 import { NavLink } from 'react-router-dom';
@@ -7,6 +8,7 @@ import { faRobot } from '@fortawesome/free-solid-svg-icons';
 // project imports
 import SimulationContext from 'contexts/context';
 
+// common navbar for settings and simulations pages
 const Navbar = () => {
   const { simulation } = useContext(SimulationContext);
   return (
@@ -21,7 +23,7 @@ const Navbar = () => {
       </BrandLink>
       <NavLinks>
         <RunLink to="/settings">Settings</RunLink>
-        {(simulation.data.length !== 0 || simulation.loaded.false) && (
+        {(simulation.data.length !== 0 || simulation.loaded === false) && (
           <NavLink to="/simulation">Simulation</NavLink>
         )}
       </NavLinks>
@@ -41,14 +43,16 @@ const Nav = styled.nav`
   padding: 2rem 0.5rem;
   margin: 0 auto;
   a {
-    color: ${({ theme }) => theme.color2.grey};
-    font-weight: 500;
+    color: ${({ theme }) => theme.color2.accent};
+    font-weight: 300;
     letter-spacing: 1px;
     line-height: 1rem;
   }
 
   .active {
-    color: rgba(255, 255, 255, 1);
+    color: ${({ theme }) => theme.color.accent};
+    text-shadow: 1px 1px 10px ${({ theme }) => theme.color.accent};
+    font-weight: 700;
   }
 
   @media only screen and (min-width: ${({ theme }) =>

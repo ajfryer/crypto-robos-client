@@ -1,5 +1,13 @@
-import React from 'react';
-import { render } from '@testing-library/react';
-import App from './App';
+import App from './app';
 
-test('renders learn react link', () => {});
+const component = <App />;
+
+// smoke test
+it('renders without crashing', async () => {
+  const div = document.createElement('div');
+  // wait for async calls to finish
+  await act(async () => {
+    ReactDOM.render(<Providers>{component}</Providers>, div);
+  });
+  ReactDOM.unmountComponentAtNode(div);
+});

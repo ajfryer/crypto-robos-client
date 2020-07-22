@@ -2,7 +2,7 @@
 import config from 'configs/config';
 
 // API base url
-const baseUrl = config.API_BASE_URL;
+const baseUrl = `${config.API_BASE_URL}/api`;
 
 // fetch prices from API
 export const fetchPrices = async () => {

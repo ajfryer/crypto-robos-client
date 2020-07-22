@@ -34,7 +34,8 @@ const SplashFeatures = () => {
             <h3>Simulate Robo Strategies</h3>
             <p>
               Robos invest based on past market data. Simulate equal weight,
-              risk parity, or minimum variance crypto robos.
+              risk parity, or minimum variance robo strategies, all industry
+              standards.
             </p>
           </div>
         </Feature>
@@ -53,8 +54,8 @@ const SplashFeatures = () => {
           <div>
             <h3>Benchmark Your HODL</h3>
             <p>
-              Robos strategies make great benchmarks for your crypto portfolio.
-              How does your return on risk compare?
+              Robos strategies make great benchmarks for your HODL or custom
+              strategy. How does your return on risk compare?
             </p>
           </div>
         </Feature>
@@ -93,11 +94,12 @@ const SplashFeatures = () => {
           <div>
             <h3>Thank You Providers</h3>
             <p>
-              Free cryptocurrency data from{' '}
-              <a href="www.alphavantage.com">AlphaVantage</a>. Free hosting from{' '}
-              <a href="www.vercel.com">Vercel</a> and{' '}
-              <a href="www.heroku.com">Heroku</a>. Support these great
-              providers!
+              Free crypto market data from{' '}
+              <a href="https://www.alphavantage.co/">AlphaVantage</a>. Free
+              hosting from <a href="https://vercel.com/">Vercel</a> and{' '}
+              <a href="https://www.heroku.com/">Heroku</a>. Free icons from{' '}
+              <a href="https://fontawesome.com//">Font Awesome</a>. Support
+              these great providers!
             </p>
           </div>
         </Feature>
@@ -118,7 +120,9 @@ const SplashFeatures = () => {
             <p>
               More cryptos, strategies, and features are coming in the near
               future. Want to see something particular?{' '}
-              <a href="www.alphavantage.com">Please get in touch. </a>
+              <a href="https://ajfryer.github.io/personal-portfolio/">
+                Please get in touch.{' '}
+              </a>
             </p>
           </div>
         </Feature>

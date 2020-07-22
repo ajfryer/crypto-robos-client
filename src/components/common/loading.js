@@ -2,29 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import styled from 'styled-components';
 
-/*
- * Loader Component
- * ================
- * - conditionally renders children components based on props.loaded
- * - helps us avoid errors that arise when rendering components before they have data!
- *
- */
 const Loader = (props) => {
-  //const themeContext = useContext(ThemeContext);
-  //console.log('Current theme from loader: ', themeContext);
-  /*
-  if (props.loading) {
-    return (
-      <Container>
-        <Spinner>{Array(12).fill(<div></div>)}</Spinner>
-        loading!
-      </Container>
-    );
-  } else {
-    return <>{props.children}</>;
-  }
-  */
-
   const SpinnerDivs = new Array(12)
     .fill(null)
     .map((_, i) => <div key={i}></div>);
@@ -42,9 +20,10 @@ const Container = styled.div`
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  height: 100%;
-  width: 100%;
+  height: 100vh;
+  width: 100vw;
   font-size: 20px;
+  background-color: ${(props) => props.theme.color.secondary};
 `;
 
 const Spinner = styled.div`
@@ -68,7 +47,7 @@ const Spinner = styled.div`
     width: 6px;
     height: 18px;
     border-radius: 20%;
-    background: ${(props) => props.theme.color.primary};
+    background: ${(props) => props.theme.color.tertiary};
   }
   div:nth-child(1) {
     transform: rotate(0deg);

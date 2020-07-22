@@ -1,3 +1,4 @@
+//node modules
 import React from 'react';
 import styled from 'styled-components';
 
@@ -14,7 +15,9 @@ const SplashFooter = () => {
         </p>
         <p>
           Want to chat?{' '}
-          <a href="mailto:someone@yoursite.com">Let's get in touch.</a>
+          <a href="https://ajfryer.github.io/personal-portfolio/">
+            Let's get in touch.
+          </a>
         </p>
       </FooterContent>
     </Footer>

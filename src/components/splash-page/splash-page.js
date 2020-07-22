@@ -3,7 +3,7 @@ import React from 'react';
 import styled from 'styled-components';
 
 // project imports
-import ErrorBoundary from 'components/common/ErrorBoundary';
+import ErrorBoundary from 'components/common/error-boundary';
 import SplashHero from 'components/splash-page/splash-hero';
 import SplashScreenshot from 'components/splash-page/splash-screenshot';
 import SplashFeatures from 'components/splash-page/splash-features';
@@ -37,7 +37,6 @@ const PageWrapper = styled.div`
 `;
 
 const Main = styled.main`
-  /*
   display: grid;
   grid-template-areas:
     'hero'
@@ -48,7 +47,6 @@ const Main = styled.main`
   grid-template-rows: auto auto auto auto;
   grid-gap: 0rem;
   row-gap: 0rem;
-  */
 
   @media only screen and (min-width: 1280px) {
     box-shadow: rgba(190, 46, 221, 0.33) 0px 4px 150px;

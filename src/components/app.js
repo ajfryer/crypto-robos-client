@@ -8,7 +8,7 @@ import SplashPage from 'components/splash-page/splash-page';
 import SettingsPage from 'components/settings-page/settings-page';
 import SimulationPage from 'components/simulation-page/simulation-page';
 import Loading from 'components/common/loading';
-import ErrorBoundary from 'components/common/ErrorBoundary';
+import ErrorBoundary from 'components/common/error-boundary';
 
 import Context from 'contexts/context';
 
@@ -55,7 +55,7 @@ const App = () => {
     const updatePrices = async () => {
       try {
         const fetchedPrices = await PricesService.fetchPrices();
-        //console.log('fetchedPrices', fetchedPrices);
+        console.log('fetchedPrices', fetchedPrices);
         setPrices(fetchedPrices);
         setPricesLoaded(true);
       } catch (e) {
