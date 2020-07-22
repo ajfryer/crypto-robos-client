@@ -4,21 +4,13 @@ Frontend for Crypto Robos - Think like a crypto robo.
 
 Simulate popular investment strategies on crypto coins and benchmark your HODL.
 
-<span align="left">
-  <img src="https://github.com/ajfryer/personal-portfolio/raw/master/img/crypto-robos-screenshot-splash.png" width="45%" alt="roach splash page screenshot">
-</span>
-
-<span align="left">
-  <img src="https://github.com/ajfryer/personal-portfolio/raw/master/img/crypto-robos-screenshot-settings.png" width="45%" alt="roach portfolio page screenshot">
-</span>
-
-<span align="left">
-  <img src="https://github.com/ajfryer/personal-portfolio/raw/master/img/crypto-robos-screenshot-simulation.png" width="45%" alt="roach portfolio page screenshot">
+<span align="center">
+  <img src="https://github.com/ajfryer/personal-portfolio/raw/master/img/crypto-robos-screenshot-splash.png" width="50%" alt="crypto robos splash screenshot">
 </span>
 
 Tech stack: React, Styled Components, HTML5, CSS3
 
-[Live Demo](https://cryptorobos.now.sh)
+[Live Demo](https://cryptorobos.vercel.app/)
 
 [Server Repo](https://github.com/ajfryer/crypto-robos-server)
 
