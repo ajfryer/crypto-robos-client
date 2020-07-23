@@ -4,17 +4,11 @@ import { Strategy } from 'portfolio-tools';
 import PortfolioAllocation from 'portfolio-allocation';
 
 const calcWeights = (dateIndex, returnsByAsset, options, context) => {
-  //console.log('calculating weights at dateIndex', dateIndex);
-  ////console.log('prices by asset', returnsByAsset);
-  ////console.log('options', options);
   // initialize weights
   let weightByAsset = Array(returnsByAsset.length).fill(0);
-  ////console.log('weightByAsset', weightByAsset);
 
   // return zero weights if date is before lookback period
   if (dateIndex + 1 < options.lookbackPeriod) return weightByAsset;
-
-  ////console.log('returnsByAsset', returnsByAsset);
 
   let covarianceMatrix;
   let variancesVector;
@@ -60,7 +54,7 @@ const calcWeights = (dateIndex, returnsByAsset, options, context) => {
     default:
       break;
   }
-  ////console.log('weightByAsset', weightByAsset);
+
   weightByAsset = PortfolioAllocation.roundedWeights(weightByAsset, 100);
 
   return weightByAsset;

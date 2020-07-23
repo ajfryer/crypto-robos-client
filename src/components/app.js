@@ -55,7 +55,6 @@ const App = () => {
     const updatePrices = async () => {
       try {
         const fetchedPrices = await PricesService.fetchPrices();
-        console.log('fetchedPrices', fetchedPrices);
         setPrices(fetchedPrices);
         setPricesLoaded(true);
       } catch (e) {

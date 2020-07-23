@@ -5,13 +5,15 @@ import Theme from 'components/Common/Theme';
 // react context
 import PortfoliosContext from 'contexts/context.js';
 
+const mockOnChange = jest.fn();
+
 const component = (
   <PortfoliosContext.Provider value={mockContext}>
     <Theme>
       <SettingsRebalance
         title={'3. Select Rebalance:'}
         setName={'selectedRebalance'}
-        controlFunc={'function'}
+        controlFunc={mockOnChange}
         type={'radio'}
         options={[
           { name: 'weekly', value: 7 },

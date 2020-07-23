@@ -212,6 +212,7 @@ const Feature = styled.div`
   }
 
   a {
+    color: ${({ theme }) => theme.color.primary};
   }
 
   @media only screen and (min-width: 768px) {

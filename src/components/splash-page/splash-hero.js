@@ -10,21 +10,19 @@ const SplashHero = () => {
   return (
     <Hero>
       <Content>
-        <Nav>
-          <NavLink to="/">
-            <LogoIcon icon={faRobot} color="tertiary" />
-            <LogoIcon icon={faRobot} color="primary" />
-            <LogoIcon icon={faRobot} color="accent" />
-          </NavLink>
-        </Nav>
+        <Brand>
+          <LogoIcon icon={faRobot} color="tertiary" />
+          <LogoIcon icon={faRobot} color="primary" />
+          <LogoIcon icon={faRobot} color="accent" />
+        </Brand>
         <h1>
           Think like a <span>crypto robo.</span>
         </h1>
 
-        <p>
+        <h2>
           Simulate popular investment strategies on Crypto coins{' '}
           <span>and benchmark your HODL.</span>
-        </p>
+        </h2>
         <CTAGroup>
           <PrimaryCTA to={'/settings'}>Simulate</PrimaryCTA>
           <SecondaryCTA href={'https://github.com/ajfryer/crypto-robos-client'}>
@@ -77,7 +75,7 @@ const Content = styled.div`
     }
   }
 
-  p {
+  h2 {
     max-width: 640px;
     font-size: 1.25rem;
     font-weight: 300;
@@ -100,7 +98,7 @@ const Content = styled.div`
       font-weight: 900;
     }
 
-    p {
+    h2 {
       font-size: 1.5rem;
       font-weight: 300;
       line-height: 2.5rem;
@@ -117,7 +115,7 @@ const LogoIcon = styled(FontAwesomeIcon)`
   color: ${(props) => props.theme.color[props.color]};
 `;
 
-export const Nav = styled.nav`
+export const Brand = styled.div`
   align-self: center;
   margin-bottom: 3rem;
 
@@ -147,10 +145,10 @@ const PrimaryCTA = styled(Link)`
     rgba(34, 166, 179, 0.33) -1px -4px 150px;
   border-radius: 0px;
   padding: 1.25rem 0;
-  color: white;
+  color: ${(props) => props.theme.color.secondary};
   font-weight: bold;
   letter-spacing: 1px;
-  font-size: 1rem;
+  font-size: 1.15rem;
   font-weight: 900;
   width: 45%;
   max-width: 190px;
@@ -173,7 +171,7 @@ const SecondaryCTA = styled.a`
   color: #95afc0;
   font-weight: bold;
   letter-spacing: 0.5px;
-  font-size: 1rem;
+  font-size: 1.15rem;
   font-weight: 900;
   width: 45%;
   max-width: 190px;

@@ -15,7 +15,6 @@ export function simulator(formPayload, prices) {
     const symbolPrices = prices.pricesByAsset[symbolIndex];
     simPricesByAsset.push(symbolPrices);
   });
-  //console.log('simPricesByAsset', simPricesByAsset);
 
   // trim simPricesByAsset to minimum length
   const min = simPricesByAsset.reduce((prev, next) =>
@@ -28,7 +27,6 @@ export function simulator(formPayload, prices) {
 
   // get returns from prices
   const simReturnsByAsset = simPricesByAsset.map((e) => calcReturns(e));
-  //console.log('converted prices to returns', simReturnsByAsset);
 
   // get formatted data from db
   const sim = new Simulation(simReturnsByAsset, PAStrategies, {

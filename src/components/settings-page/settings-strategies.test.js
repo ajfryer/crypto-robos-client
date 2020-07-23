@@ -5,13 +5,15 @@ import Theme from 'components/Common/Theme';
 // react context
 import PortfoliosContext from 'contexts/context.js';
 
+const mockOnChange = jest.fn();
+
 const component = (
   <PortfoliosContext.Provider value={mockContext}>
     <Theme>
       <SettingsStrategies
         title={'1. Select Robo:'}
         setName={'selectedStrategy'}
-        controlFunc={'function'}
+        controlFunc={mockOnChange}
         type={'radio'}
         options={[
           {

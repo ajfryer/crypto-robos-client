@@ -19,30 +19,40 @@ const SettingsForm = () => {
     selectedSymbols: DEFAULT_SELECTIONS.SYMBOLS,
     rebalanceOptions: DEFAULT_OPTIONS.REBALANCE,
     selectedRebalance: DEFAULT_SELECTIONS.REBALANCE,
+    pending: false,
   });
-
-  //console.log('form is rendered');
 
   let { updateSimulation, setSimulationLoaded } = useContext(SimulationContext);
   let history = useHistory();
 
   const handleSubmit = async (e) => {
     e.preventDefault();
-    await setSimulationLoaded(false);
+    //await setSimulationLoaded(false);
 
-    history.push('/simulation');
+    setState({
+      ...state,
+      pending: true,
+    });
 
-    //console.log('submitting form');
-    const formPayload = {
-      symbols: state.selectedSymbols,
-      strategy: state.selectedStrategy,
-      lookbackPeriod: Number(30),
-      rebalancePeriod: Number(state.selectedRebalance),
-    };
+    setTimeout(function () {
+      const formPayload = {
+        symbols: state.selectedSymbols,
+        strategy: state.selectedStrategy,
+        lookbackPeriod: Number(30),
+        rebalancePeriod: Number(state.selectedRebalance),
+      };
 
-    updateSimulation(formPayload);
+      updateSimulation(formPayload);
 
-    setSimulationLoaded(true);
+      history.push('/simulation');
+
+      setState({
+        ...state,
+        pending: false,
+      });
+    }, 100);
+
+    //setSimulationLoaded(true);
   };
 
   const handleSymbolChange = (e) => {
@@ -62,7 +72,6 @@ const SettingsForm = () => {
   };
 
   const handleStrategyChange = (e) => {
-    //console.log('handling strategy change', e.target.value);
     setState({
       ...state,
       selectedStrategy: e.target.value,

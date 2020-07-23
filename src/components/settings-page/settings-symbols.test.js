@@ -5,6 +5,8 @@ import Theme from 'components/Common/Theme';
 // react context
 import PortfoliosContext from 'contexts/context.js';
 
+const mockOnChange = jest.fn();
+
 const component = (
   <PortfoliosContext.Provider value={mockContext}>
     <Theme>
@@ -12,7 +14,7 @@ const component = (
         title={'2. Select Cryptos:'}
         setName={'selectedSymbols'}
         type={'checkbox'}
-        controlFunc={'function'}
+        controlFunc={mockOnChange}
         options={[
           { symbol: 'BTC', name: 'Bitcoin' },
           { symbol: 'ETH', name: 'Ethereum' },
