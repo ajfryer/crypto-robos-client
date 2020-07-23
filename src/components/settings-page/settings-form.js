@@ -124,7 +124,7 @@ const Button = styled.button`
   border: 1px solid ${(props) => props.theme.color.accent};
   border-radius: 5px;
   padding: 1.5rem 3rem;
-  color: white;
+  color: ${(props) => props.theme.color.secondary};
   font-weight: bold;
   letter-spacing: 0.5px;
   font-size: 1rem;

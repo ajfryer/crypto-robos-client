@@ -57,14 +57,14 @@ const Card = styled.div`
     letter-spacing: 1px;
     font-weight: 400;
     margin-bottom: 0.5rem;
-    color: ${({ theme }) => theme.color.tertiary};
+    color: ${({ theme }) => theme.color.white};
   }
 `;
 
 const Percent = styled.span`
   color: ${({ v, theme }) =>
     v === 'p' ? theme.color.accent : theme.color.tertiary};
-  color: white;
+  color: ${({ theme }) => theme.color.tertiary};
 `;
 
 export default MetricsTable;

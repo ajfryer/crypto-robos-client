@@ -50,7 +50,6 @@ const StrategiesRadioGroup = (props) => {
 
 const Card = styled.div`
   border-radius: 10px;
-
   padding: 1rem 0.5rem;
   margin: 2rem 0 0.5rem 0;
 
@@ -165,6 +164,7 @@ const CalendarNum = styled.strong`
     return selected
       ? css`
           color: ${props.theme.color.primary};
+          background-color: inherit;
         `
       : css`
           color: ${props.theme.color2.grey};
