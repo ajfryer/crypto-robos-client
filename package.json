@@ -37,7 +37,7 @@
     "build-storybook": "build-storybook -s public",
     "start": "react-scripts start",
     "build": "react-scripts build",
-    "test": "react-scripts test --silent --transformIgnorePatterns \"node_modules/(?!portfolio-tools)/\" --env=jsdom",
+    "test": "react-scripts test --transformIgnorePatterns \"node_modules/(?!portfolio-tools)/\" --silent --env=jsdom",
     "eject": "react-scripts eject",
     "serve": "serve build",
     "deploy": "now --prod",
